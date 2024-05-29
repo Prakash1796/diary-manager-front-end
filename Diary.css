@@ -1,0 +1,388 @@
+/* Add your CSS styles here */
+
+/* Colors */
+:root {
+    --primary-color: #00bcd4;
+    --secondary-color: #ff9800;
+    --text-color: #333;
+    --bg-color: #ccc7c7;
+  }
+  
+  /* Diary Entry Container */
+  #creatediarypg {
+  height: 630px;
+    max-width: 1000px;
+   margin-top: 100px;
+    padding-top: 40px;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  #created{
+    height: 700x;
+    background-color: #1b1b1b;
+    margin-top: -10px;
+  }
+  .inp{
+    width: 500px;
+  }
+  
+  /* Heading */
+  .heading{
+  
+    font-size: 45px;
+    color: var(--secondary-color);
+    text-align: center;
+  }
+  
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  
+  label {
+    display: block;
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+    
+  }
+  
+  input[type='date'],
+  input[type='time'],
+  textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #f57c00;
+  }
+  
+  
+  /* ----------cards ----------- */
+  
+  .cardfull {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #202022;
+    color: #1e293b;
+    font-family: "Euclid Circular A", "Poppins";
+  }
+  
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  
+  
+  article {
+    margin-top: 40px;
+    position: relative;
+    perspective: 1000px;
+    width: 900px;
+    height: 350px;
+  }
+  
+  article .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 2px;
+  }
+  
+  article .head h2 {
+    font-size: 20px;
+  }
+  
+  article .front,
+  article .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    backface-visibility: hidden;
+    background: #e4e2e1;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+    padding: 24px;
+    transition: 0.6s;
+    cursor: pointer;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+  }
+  
+  .inputli {
+    position: absolute;
+    scale: 0;
+  }
+  
+  input:checked ~ article .back {
+    transform: rotateY(0);
+  }
+  
+  input:checked ~ article .front {
+    transform: rotateY(-180deg);
+  }
+  
+  article var {
+    font-style: normal;
+    font-size: 80px;
+    line-height: 1;
+  }
+  
+  article h3 {
+    margin: 0 0 30px;
+    font-weight: 500;
+  }
+  
+  #summary :is(var, h3) {
+    color: #3b82f6;
+  }
+  
+  #overdue :is(var, h3) {
+    color: #c50707;
+  }
+  
+  #features :is(var, h3) {
+    color: #418b1f;
+    font-size:70px;
+  }
+  
+  article :is(h4, p) {
+    overflow-y:auto;
+    font-size: 20px;
+  }
+  
+  article p {
+    margin-top: 0px;
+  }
+  
+  
+  /* ----------profile-------- */
+  
+  
+  /* Define variables */
+  :root {
+    --font-color: #404040;
+    --dp-size: 8rem;
+    --padding-size: 2rem;
+    --opener-size: 2.5rem;
+    --dot-size: 0.4rem;
+  }
+  
+  /* Global styles */
+  
+  
+  .cardfull {
+    background-image: linear-gradient(to bottom right, #ff9eaa 0% 65%, #e860ff 95% 100%);
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: var(--padding-size) 0;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    background-color: white;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+    /* margin-left: 20px !important; */
+  }
+  
+  .banner {
+    background-image: url(https://cdn.pixabay.com/photo/2015/10/02/15/00/diary-968592_640.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 11rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .banner svg {
+    background-size: cover;
+    
+    background-image: url(https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg);
+    background-color: rgb(233, 230, 230);
+    width: var(--dp-size);
+    height: var(--dp-size);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transform: translateY(50%);
+    transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+  
+  .banner svg:hover {
+    transform: translateY(50%) scale(1.3);
+  }
+  
+  .menu1 {
+    width: 100%;
+    height: 5.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .menu .opener {
+    width: var(--opener-size);
+    height: var(--opener-size);
+    position: relative;
+    border-radius: 50%;
+    transition: background-color 100ms ease-in-out;
+  }
+  
+  .menu .opener:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .menu .opener span {
+    background-color: var(--font-color);
+    width: var(--dot-size);
+    height: var(--dot-size);
+    position: absolute;
+    top: 0;
+    left: calc(50% - var(--dot-size) / 2);
+    border-radius: 50%;
+  }
+  .name{
+    color: #a70505;
+    margin-bottom: 10px;
+  }
+  /* Other styles... */
+  /* ... */
+  
+  /* Rest of your styles as provided */
+  
+  
+  @media only screen and (max-width: 600px){
+  
+    .inp{
+      width: 300px;
+    }
+    .btcr{
+      display: flex;
+      margin-left:50px !important ;
+    }
+    .cardfull{
+      background-image: none ;
+      background-color: white;
+      padding-top: 300px !important;
+    }
+    #search{
+     margin-left: 300px !important;
+    }
+  
+    
+    
+  }
+  
+  
+  /* -----------search-------- */
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /*  html {
+    background: #0d2840;
+    font: 300 1em/1.5 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+  } */
+   
+   #search {
+    position: fixed;
+    max-width: 20em;
+    margin: 0px auto;
+    padding: 2em;
+  }
+   
+  .search-h {
+    font-size: 4em;
+    margin-bottom: .5em;
+  }
+  
+  /* Search styles */
+  
+  #s {
+    background: rgba(0, 0, 0, .375) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=) no-repeat 14px 14px;
+    text-indent: 1em;
+    display: inline-block;
+    border: 0 none;
+    width: 0;
+    height: 3em;
+    border-radius: 3em;
+    -webkit-transition: .3s;
+    transition: .3s;
+    outline: none;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    color: #999;
+    vertical-align: baseline;
+  }
+  
+  input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  
+  #s:hover,
+  #s:focus {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==) 14px 14px no-repeat;
+  }
+  
+  #s:focus {
+    width: 100%;
+    cursor: text;
+  }

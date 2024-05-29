@@ -1,0 +1,139 @@
+/* --------navebar----------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  height: 90px;
+  background-color: hsl(0, 0%, 10%);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo i {
+  color: #0aa5ff;
+  font-size: 22px;
+}
+
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-left: 12px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 24px;
+  border-right: 1px solid #999999;
+  padding-inline: 24px;
+}
+
+.menu-links a {
+  font-weight: 500;
+  color: #999999;
+  padding: 8px 16px;
+}
+.menu-links a:hover {
+  color: white;
+}
+.log-in {
+  font-weight: 500;
+  padding: 12px 22px;
+  background-color: transparent;
+  color: #999999;
+  border-radius: 10px;
+  border: 2px solid #c00707;
+  transition: 0.2s;
+}
+.log-in:hover {
+  background-color: #c70505;
+  color: white;
+}
+
+.menu-btn {
+  font-size: 32px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+.logo-font{
+  font-size: 50px;
+}
+
+@media (max-width: 53rem) {
+  .menu {
+    display: none;
+    flex-direction: column; /* Change direction to column */
+    position: absolute;
+    top: 90px; /* Adjust as per your navbar height */
+    left: 0;
+    background-color: hsl(0, 0%, 10%);
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #999999;
+    z-index: 1;
+  }
+  .logo-font{
+/* position: absolute;
+right: 220px;
+bottom: 30px; */
+padding-right: 250px;
+font-size: 25px;
+  }
+ 
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+    margin-left: 230px;
+    margin-top: -45px;
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-inline: 0;
+  }
+
+  .menu-links a {
+    padding: 12px 24px; /* Adjust spacing */
+    
+    border: 1px solid;
+  }
+
+  .menu-links a:last-child {
+   
+  }
+}
